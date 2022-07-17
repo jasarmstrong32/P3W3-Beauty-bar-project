@@ -1,5 +1,9 @@
 const button = document.getElementById('submit');
-button.addEventListener('click', submitFunction);
+button.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  submitFunction();
+  window.location.reload(true);
+});
 
 function submitFunction() {
   let boxes = document.querySelectorAll('input[name="box"]:checked');
@@ -91,17 +95,21 @@ function submitFunction() {
         );
       }
     });
-    
+
     let contact = ``;
-    if(nameInput.value !== ''){
+    if (nameInput.value !== '') {
       contact += `Name: ${nameInput.value} `;
-    } else if (phoneInput.value.toString() !== '') {
+    } 
+    if (phoneInput.value.toString() !== '') {
       contact += `Phone: ${phoneInput.value.toString()} `;
-    } else if (emailInput.value.toString() !== ''){
+    }
+    if (emailInput.value.toString() !== '') {
       contact += `Email: ${emailInput.value.toString()} `;
-    } else if(dateInput.value.toString() !== ''){
+    }
+    if (dateInput.value.toString() !== '') {
       contact += `Appointment: ${dateInput.value.toString()}`;
-    } else if(commentInput.value !== ''){
+    }
+    if (commentInput.value !== '') {
       contact += ` Reminders: ${commentInput.value}`;
     }
 
