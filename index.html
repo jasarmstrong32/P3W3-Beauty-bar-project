@@ -11,10 +11,10 @@
     <script type="module" src="/main.js"></script>
     <div class="wrapper">
       <h1>Beauty Bar Appointment book</h1>
-      <form>
-        <h4 class="notice">* - indicates a required field.</h4>
+      <form method="post">
+        <h2 class="notice">* - indicates a required field.</h2>
         <fieldset class="services" required>
-          <legend><h2>Services You're Interested In:</h2></legend>
+          <legend><h3 class="services">Services You're Interested In:</h3></legend>
           <h4 class="notice">* please select one or more.</h4>
 
           <br />
@@ -316,19 +316,19 @@
             />
             <span class="custom-radio-button"></span>
           </label>
+          <label for="photo" class="notice">Upload reference photos for desired hair style and nails.</label>
+          <input class="contact" type="file" id="photo" name="photo" multiple/>
         </fieldset>
         <br />
         <br />
 
         <fieldset class="contact">
-          <legend><h1>Contact information</h1></legend>
+          <legend><h3 class='contact'>Contact information:</h3></legend>
           <br />
-          <label for="photo" class="contact">Profile Photo</label>
-          <input class="contact" type="file" id="photo" name="photo" />
 
           <label for="name" class="contact"
             >Full Name <br />
-            <h4 class="notice">*required</h4></label
+            <h4 class="contact-notice">*required</h4></label
           >
           <input
             required
@@ -339,7 +339,11 @@
             autocomplete="name"
             placeholder="Jane Doe"
           />
-
+          <br>
+          <hr width="90%" 
+          size="5"
+          color='fc6aa7'>
+          <br>
           <label for="phone" class="contact"
             >Phone <br />
             <h4 class="contact-notice">*required</h4></label
@@ -353,7 +357,11 @@
             autocomplete="phone"
             placeholder="(123)456-7890"
           />
-
+          <br>
+          <hr width="90%" 
+          size="5"
+          color='fc6aa7'>
+          <br>
           <label for="email" class="contact"
             >Email <br />
             <h4 class="contact-notice">*required</h4></label
@@ -367,7 +375,11 @@
             autocomplete="email"
             placeholder="doe.jane1@example.com"
           />
-
+          <br>
+          <hr width="90%" 
+          size="5"
+          color='fc6aa7'>
+          <br>
           <label for="date" class="contact"
             >Appointment Date <br />
             <h4 class="contact-notice">*required</h4></label
@@ -384,6 +396,11 @@
           <br />
           <br />
           <br />
+          <br>
+          <hr width="90%" 
+          size="5"
+          color='fc6aa7'>
+          <br>
           <h3 class="contact">Best way to contact you:</h3>
           <label class="contact"
             >Phone
@@ -428,7 +445,7 @@
     </div>
     <footer clas="footer">
       <br />
-      <p id="contact-footer">Contact us:</p>
+      <h5 id="contact-footer">Contact us:</h5>
       <div class="links"></div>
       <a
         class="btn--social"

@@ -4,7 +4,6 @@ button.addEventListener('click', submitFunction);
 function submitFunction() {
   let boxes = document.querySelectorAll('input[name="box"]:checked');
   let output = [];
-  let contact = [];
   var data = new FormData();
 
   boxes.forEach((box) => {
@@ -57,70 +56,34 @@ function submitFunction() {
     }
 
     const nameInput = document.querySelector('#name');
-
-    nameInput.addEventListener('input', () => {
-      nameInput.setCustomValidity('');
-      nameInput.checkValidity();
-      contact.push(`Name: ${nameInput.value}`);
-      data.append('name', document.getElementById('name').value);
-    });
-
     nameInput.addEventListener('invalid', () => {
       if (nameInput.value === '') {
         nameInput.setCustomValidity('Enter your name!');
       }
     });
+
     const phoneInput = document.querySelector('#phone');
-
-    phoneInput.addEventListener('input', () => {
-      phoneInput.setCustomValidity('');
-      phoneInput.checkValidity();
-      contact.push(`Phone: ${phoneInput.value}`);
-      data.append('phone', document.getElementById('phone').value);
-    });
-
     phoneInput.addEventListener('invalid', () => {
       if (phoneInput.value === '') {
         phoneInput.setCustomValidity('Enter your phone number!');
       }
     });
+
     const emailInput = document.querySelector('#email');
-
-    emailInput.addEventListener('input', () => {
-      emailInput.setCustomValidity('');
-      emailInput.checkValidity();
-      contact.push(`Email: ${emailInput.value}`);
-      data.append('email', document.getElementById('email').value);
-    });
-
     emailInput.addEventListener('invalid', () => {
       if (emailInput.value === '') {
         emailInput.setCustomValidity('Enter your email!');
       }
     });
+
     const dateInput = document.querySelector('#date');
-
-    dateInput.addEventListener('input', () => {
-      dateInput.setCustomValidity('');
-      dateInput.checkValidity();
-      contact.push(`Appointment: ${dateInput.value}`);
-      data.append('date', document.getElementById('date').value);
-    });
-
     dateInput.addEventListener('invalid', () => {
       if (dateInput.value === '') {
         dateInput.setCustomValidity('Select an appointment date!');
       }
     });
+
     const commentInput = document.querySelector('#comment');
-
-    commentInput.addEventListener('input', () => {
-      commentInput.setCustomValidity('');
-      commentInput.checkValidity();
-      contact.push(`Reminder(s): ${commentInput.value}`);
-      data.append('comment', document.getElementById('comment').value);
-    });
-
     commentInput.addEventListener('invalid', () => {
       if (commentInput.value === '') {
         commentInput.setCustomValidity(
@@ -128,6 +91,19 @@ function submitFunction() {
         );
       }
     });
+    
+    let contact = ``;
+    if(nameInput.value !== ''){
+      contact += `Name: ${nameInput.value} `;
+    } else if (phoneInput.value.toString() !== '') {
+      contact += `Phone: ${phoneInput.value.toString()} `;
+    } else if (emailInput.value.toString() !== ''){
+      contact += `Email: ${emailInput.value.toString()} `;
+    } else if(dateInput.value.toString() !== ''){
+      contact += `Appointment: ${dateInput.value.toString()}`;
+    } else if(commentInput.value !== ''){
+      contact += ` Reminders: ${commentInput.value}`;
+    }
 
     let total = 0;
     output.forEach((item) => {
@@ -167,11 +143,10 @@ function submitFunction() {
         total += 15;
       }
     });
-    let contactInfo = contact.join(', ');
 
     alert(`You've chosen: ${output} 
     your total is $ ${total}`);
-    alert(`Provided contact information: ${contactInfo}`);
-    console.log(data);
+    console.log(contact);
+    alert(contact);
   }
 }
