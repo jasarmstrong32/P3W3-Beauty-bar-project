@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script type="module" src="/main.js"></script>
+    <div class="wrapper">
+      <h1>Beauty Bar Appointment book</h1>
+      <form>
+        <h4 class="notice">* - indicates a required field.</h4>
+        <fieldset class="services" required>
+          <legend><h2>Services You're Interested In:</h2></legend>
+          <h4 class="notice">* please select one or more.</h4>
+
+          <br />
+          <br />
+          <br />
+
+          <label for="wash" class="services">
+            <h3 class="services">Wash - $45</h3>
+            Hair will be washed and blow dried.
+            <br />
+            Optional add-ons include:
+            <ul class="wash-add-ons">
+              <label class="add-on"
+                >Protein treatment - $15
+                <input
+                  class="wash-add-ons"
+                  type="checkbox"
+                  name="wash"
+                  value="protein"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Trim - $5
+                <input
+                  class="wash-add-ons"
+                  type="checkbox"
+                  name="wash"
+                  value="trim"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Color treatment - $50
+                <input
+                  class="wash-add-ons"
+                  type="checkbox"
+                  name="wash"
+                  value="color"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+            </ul>
+            <input
+              class="custom-radio-button"
+              type="checkbox"
+              name="box"
+              id="wash"
+              value="wash"
+            />
+            <span class="custom-radio-button"></span>
+          </label>
+
+          <label for="style" class="services">
+            <h3 class="services">Style</h3>
+            Hair will be washed, blow dried, and trimmed, then styled into the
+            hairstyle of your choosing.
+            <br />
+            Options include:
+            <ul class="style-options">
+              <label class="add-on"
+                >Cornrows - $20
+                <input
+                  class="style-options"
+                  type="radio"
+                  name="style"
+                  value="cornrows"
+                />
+                <span class="custom-radio-button"></span>
+                <img
+                  src="https://ebena.net/sites/default/files/2020-08/cornrows.jpg"
+                  alt="cornrows"
+                />
+              </label>
+              <label class="add-on"
+                >Box Braids - $125
+                <input
+                  class="style-options"
+                  type="radio"
+                  name="style"
+                  value="box-braids"
+                />
+                <span class="custom-radio-button"></span>
+                <img
+                  src="https://i.pinimg.com/736x/47/e1/be/47e1be5480723e2462520ad8cc156c62.jpg"
+                  alt="box braids"
+                />
+              </label>
+              <label class="add-on"
+                >Sew-in - $230
+                <input
+                  class="style-options"
+                  type="radio"
+                  name="style"
+                  value="sew-in"
+                />
+                <span class="custom-radio-button"></span>
+                <img
+                  src="https://th.bing.com/th/id/OIP.Nr35As1BfiJygaTW9og8GAHaKB?w=161&h=218&c=7&r=0&o=5&pid=1.7"
+                  alt="sew-in"
+                />
+              </label>
+              <label class="add-on"
+                >Pixie cut - $80
+                <input
+                  class="style-options"
+                  type="radio"
+                  name="style"
+                  value="pixie-cut"
+                />
+                <span class="custom-radio-button"></span>
+                <img
+                  src="https://th.bing.com/th/id/R.0756e440967a36d80c446f7b5dd970f6?rik=b1TS9cQ0NPCQbA&pid=ImgRaw&r=0"
+                  alt="pixie-cut"
+                />
+              </label>
+              <label class="add-on"
+                >Silk Press - $150
+                <input
+                  class="style-options"
+                  type="radio"
+                  name="style"
+                  value="silk-press"
+                />
+                <span class="custom-radio-button"></span>
+                <img
+                  src="https://th.bing.com/th/id/OIP.NTKa3tYw6GUvROUuLimc7wHaHX?w=203&h=202&c=7&r=0&o=5&pid=1.7"
+                  alt="silk-press"
+                />
+              </label>
+            </ul>
+            Add-ons:
+            <ul>
+              <label class="add-on">
+                Color treatment - $50
+                <input
+                  id="color-add-on"
+                  type="checkbox"
+                  name="style-add-on"
+                  value="color"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+            </ul>
+            <input
+              class="custom-radio-button"
+              type="checkbox"
+              name="box"
+              id="style"
+              value="style"
+            />
+            <span class="custom-radio-button"></span>
+          </label>
+
+          <label for="brows" class="services">
+            <h3 class="services">Brows - $20</h3>
+            Brows will be shaped and trimmed using method of your choice.
+            <br />
+            Options include:
+            <ul class="brow-options">
+              <label class="add-on"
+                >Wax
+                <input
+                  class="brow-options"
+                  type="radio"
+                  name="brows"
+                  value="wax"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Thread
+                <input
+                  class="brow-options"
+                  type="radio"
+                  name="brows"
+                  value="thread"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Microblade
+                <input
+                  class="brow-options"
+                  type="radio"
+                  name="brows"
+                  value="microblade"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+            </ul>
+            Optional add-ons include:
+            <ul class="brow-add-ons">
+              <label class="add-on"
+                >Brow Tint - $25
+                <input
+                  class="brow-add-ons"
+                  type="checkbox"
+                  name="b-add-on"
+                  value="tint"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Brow Lamination - $35
+                <input
+                  class="brow-add-ons"
+                  type="checkbox"
+                  name="b-add-on"
+                  value="lamination"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+            </ul>
+            <input
+              class="custom-radio-button"
+              type="checkbox"
+              name="box"
+              id="brows"
+              value="brows"
+            />
+            <span class="custom-radio-button"></span>
+          </label>
+
+          <label for="nails" class="services">
+            <h3 class="services">Nails - $25</h3>
+            <br />
+            Includes basic manicure and nail care.
+            <br />
+            Add-ons include:
+            <ul class="nail-add-ons">
+              <label class="add-on"
+                >No-chip + $35
+                <input
+                  class="nail-add-ons"
+                  type="checkbox"
+                  name="nails"
+                  value="no-chip"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Dip powder + $30
+                <input
+                  class="nail-add-ons"
+                  type="checkbox"
+                  name="nails"
+                  value="dip-powder"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Full set + $25
+                <input
+                  class="nail-add-ons"
+                  type="checkbox"
+                  name="nails"
+                  value="full-set"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Fill-in + $15
+                <input
+                  class="nail-add-ons"
+                  type="checkbox"
+                  name="nails"
+                  value="fill-in"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+              <label class="add-on"
+                >Soak off + $15
+                <input
+                  class="nail-add-ons"
+                  type="checkbox"
+                  name="nails"
+                  value="soak-off"
+                />
+                <span class="custom-radio-button"></span>
+              </label>
+            </ul>
+            <label for="nailscomment" class="notice">
+              Provide details on what style/design you want: <br />
+            </label>
+            <textarea
+              id="nailscomment"
+              name="nailscomment"
+              placeholder="pink and black ombre with design and rhinestones for accent nails, coffin shape, long"
+              spellcheck="true"
+            ></textarea>
+            <br />
+            <input
+              class="custom-radio-button"
+              type="checkbox"
+              name="box"
+              id="nails"
+              value="nails"
+            />
+            <span class="custom-radio-button"></span>
+          </label>
+        </fieldset>
+        <br />
+        <br />
+
+        <fieldset class="contact">
+          <legend><h1>Contact information</h1></legend>
+          <br />
+          <label for="photo" class="contact">Profile Photo</label>
+          <input class="contact" type="file" id="photo" name="photo" />
+
+          <label for="name" class="contact"
+            >Full Name <br />
+            <h4 class="notice">*required</h4></label
+          >
+          <input
+            required
+            type="text"
+            name="name"
+            id="name"
+            class="contact"
+            autocomplete="name"
+            placeholder="Jane Doe"
+          />
+
+          <label for="phone" class="contact"
+            >Phone <br />
+            <h4 class="contact-notice">*required</h4></label
+          >
+          <input
+            required
+            type="tel"
+            name="phone"
+            id="phone"
+            class="contact"
+            autocomplete="phone"
+            placeholder="(123)456-7890"
+          />
+
+          <label for="email" class="contact"
+            >Email <br />
+            <h4 class="contact-notice">*required</h4></label
+          >
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            class="contact"
+            autocomplete="email"
+            placeholder="doe.jane1@example.com"
+          />
+
+          <label for="date" class="contact"
+            >Appointment Date <br />
+            <h4 class="contact-notice">*required</h4></label
+          >
+          <input
+            required
+            type="datetime-local"
+            name="date"
+            class="contact"
+            id="date"
+            min="2022-01-01"
+            max="2022-12-31"
+          />
+          <br />
+          <br />
+          <br />
+          <h3 class="contact">Best way to contact you:</h3>
+          <label class="contact"
+            >Phone
+            <input
+              class="contact"
+              type="radio"
+              name="radio"
+              value="phone"
+              checked
+            />
+            <span class="custom-radio-button"></span>
+          </label>
+          <label class="contact"
+            >Email
+            <input class="contact" type="radio" name="radio" value="email" />
+            <span class="custom-radio-button"></span>
+          </label>
+          <br />
+          <br />
+          <label for="time" class="contact">Best time to contact you:</label>
+          <select class="contact" id="time" name="time">
+            <option selected value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="comment" class="contact"
+            >Please provide 1-3 times and dates to send your Appointment
+            reminders <br />(ex: 04/13/2022 @ 4pm) <br />
+            <h4 class="contact-notice">*required</h4></label
+          >
+          <textarea id="comment" name="comment" required></textarea>
+        </fieldset>
+        <br />
+        <br />
+        <br />
+        <button id="submit">Book Appointment!</button>
+      </form>
+      <div id="response"></div>
+    </div>
+    <footer clas="footer">
+      <br />
+      <p id="contact-footer">Contact us:</p>
+      <div class="links"></div>
+      <a
+        class="btn--social"
+        target="_top"
+        href="https://twitter.com/jasarmstrong32"
+      >
+        <img
+          class="social-bttn"
+          src="https://cdn.glitch.global/dba683c1-fa6d-4bfc-8672-17da758cacbf/Logo%20blue.svg?v=1650642422237"
+          alt="twitter logo"
+          height="20px"
+        />
+      </a>
+      <a
+        class="btn--social"
+        target="_top"
+        href="https://www.facebook.com/jaystrong32/"
+      >
+        <img
+          class="social-bttn"
+          src="https://th.bing.com/th/id/OIP.aMIuUVpXEimFUvS71LHY2wHaHx?w=170&h=180&c=7&r=0&o=5&pid=1.7"
+          alt="facebook logo"
+          height="20px"
+        />
+      </a>
+      <a
+        class="btn--social"
+        target="_top"
+        href="https://www.instagram.com/ransacked.avacado/"
+      >
+        <img
+          class="social-bttn"
+          src="https://th.bing.com/th/id/OIP.akd5Zua7121hxmhwiN1JQgHaHa?w=198&h=198&c=7&r=0&o=5&pid=1.7"
+          alt="instagram logo"
+          height="20px"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
