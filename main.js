@@ -1,8 +1,8 @@
 const button = document.getElementById('submit');
 button.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  submitFunction();
-  window.location.reload(true);
+  evt.preventDefault(); //keeps page from loading error message after submit
+  submitFunction(); //function call for alerts
+  window.location.reload(true); //reloads window after submit
 });
 
 function submitFunction() {
@@ -96,6 +96,8 @@ function submitFunction() {
       }
     });
 
+
+    //so lo if statement because there's no loop
     let contact = ``;
     if (nameInput.value !== '') {
       contact += `Name: ${nameInput.value} `;
