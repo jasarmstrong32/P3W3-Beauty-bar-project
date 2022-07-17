@@ -5,6 +5,7 @@ function submitFunction() {
   let boxes = document.querySelectorAll('input[name="box"]:checked');
   let output = [];
   let contact = [];
+  var data = new FormData();
 
   boxes.forEach((box) => {
     output.push(box.value);
@@ -61,6 +62,7 @@ function submitFunction() {
       nameInput.setCustomValidity('');
       nameInput.checkValidity();
       contact.push(`Name: ${nameInput.value}`);
+      data.append('name', document.getElementById('name').value);
     });
 
     nameInput.addEventListener('invalid', () => {
@@ -74,6 +76,7 @@ function submitFunction() {
       phoneInput.setCustomValidity('');
       phoneInput.checkValidity();
       contact.push(`Phone: ${phoneInput.value}`);
+      data.append('phone', document.getElementById('phone').value);
     });
 
     phoneInput.addEventListener('invalid', () => {
@@ -87,6 +90,7 @@ function submitFunction() {
       emailInput.setCustomValidity('');
       emailInput.checkValidity();
       contact.push(`Email: ${emailInput.value}`);
+      data.append('email', document.getElementById('email').value);
     });
 
     emailInput.addEventListener('invalid', () => {
@@ -100,6 +104,7 @@ function submitFunction() {
       dateInput.setCustomValidity('');
       dateInput.checkValidity();
       contact.push(`Appointment: ${dateInput.value}`);
+      data.append('date', document.getElementById('date').value);
     });
 
     dateInput.addEventListener('invalid', () => {
@@ -113,6 +118,7 @@ function submitFunction() {
       commentInput.setCustomValidity('');
       commentInput.checkValidity();
       contact.push(`Reminder(s): ${commentInput.value}`);
+      data.append('comment', document.getElementById('comment').value);
     });
 
     commentInput.addEventListener('invalid', () => {
@@ -166,6 +172,6 @@ function submitFunction() {
     alert(`You've chosen: ${output} 
     your total is $ ${total}`);
     alert(`Provided contact information: ${contactInfo}`);
-    console.log(contactInfo);
+    console.log(data);
   }
 }
